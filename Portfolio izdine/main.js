@@ -79,19 +79,6 @@ new THREE.BoxGeometry(15,15,10),
 new THREE.MeshBasicMaterial({map: IzdineTexture,})
 );
 
-// const tiesTexture = new THREE.TextureLoader().load('Tiestest.webp');
-// const normalTexture = new THREE.TextureLoader().load('normal.jpg');
-// const ties = new THREE.Mesh(
-//     new THREE.SphereGeometry(15,15,15),
-//     new THREE.MeshBasicMaterial({
-//         map: tiesTexture,
-//         normalmap: normalTexture
-//     })
-//     );
-//     scene.add(ties)
-
-//     ties.position.z = 10
-//     ties.position.setX = 10
 
 
 scene.add(Izdine);
