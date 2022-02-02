@@ -15,23 +15,23 @@ canvas: document.querySelector('#bg')
 
 renderer.setPixelRatio(window.devicePixelRatio);
 renderer.setSize( window.innerWidth, window.innerHeight );
-camera.position.setZ(30);
+camera.position.setZ(100);
 
 
 renderer.render(scene, camera);
 
 // 3D object //
-const geometry = new THREE.TorusGeometry(10, 3, 15, 100);
+const geometry = new THREE.TorusGeometry(15, 3, 15, 100);
 const meterial = new THREE.MeshStandardMaterial({color:0xFF6347});
 const torus = new THREE.Mesh(geometry, meterial);
 
 scene.add(torus);
 
 
-// const planeGeom = new THREE.PlaneGeometry (100, 100,);
-// const plabe = new THREE.Mesh(planeGeom, meterial);
+// const planeGeom = new THREE.PlaneGeometry (100, 50,);
+// const plane = new THREE.Mesh(planeGeom, meterial);
 
-// scene.add(plabe);
+// scene.add(plane);
 
 
 // Light //
@@ -47,21 +47,21 @@ scene.add(pointLight, ambientLight)
 // light.castShadow = true; // default false
 // scene.add( light );
 
-const lightHelper = new THREE.PointLightHelper(pointLight)
-const gridHelper = new THREE.GridHelper(200, 50 )
-scene.add(lightHelper, gridHelper)
+// const lightHelper = new THREE.PointLightHelper(pointLight)
+// const gridHelper = new THREE.GridHelper(200, 50 )
+// scene.add(lightHelper, gridHelper)
 
 
 //control met muis
 const controls = new OrbitControls(camera, renderer.domElement);
 
-// de steren 
+// De steren 
 function addStar() {
 const geometry = new THREE.SphereGeometry(0.25, 24, 24);
 const material = new THREE.MeshStandardMaterial({ color: 0xFFFFFF})
 const star = new THREE.Mesh( geometry, material);
 
-const [x, y, z] = Array(3).fill().map(() => THREE.MathUtils.randFloatSpread( 100 ) );
+const [x, y, z] = Array(3).fill().map(() => THREE.MathUtils.randFloatSpread( 150) );
 
 star.position.set(x, y, z);
 scene.add(star)
@@ -100,13 +100,13 @@ Izdine.position.z = 30
 Izdine.position.setX = 10
 
 function moveCamera(){
-const t = document.body.getBoundingClientRect().top;
-    torus.rotation.x += 0.05;
-    torus.rotation.y += 0.075;
-    torus.rotation.z += 0.05;
+    const t = document.body.getBoundingClientRect().top;
+    torus.rotation.x += 0.01;
+    torus.rotation.y += 0.035;
+    torus.rotation.z += 0.01;
 
-    Izdine.rotation.y += 0.01;
-    Izdine.rotation.z += 0.01;
+    Izdine.rotation.y += 0.0;
+    Izdine.rotation.z += 0.0;
 
     camera.position.z = t * -0.01;
     camera.position.x = t * -0.0001;
