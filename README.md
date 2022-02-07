@@ -3,7 +3,7 @@ Iz-Dine Amadou Portfolio
 
 # Project setup
 install vite 
-Npm init @vite.js/app
+npm init @vite.js/app
 
 install three.js 
 
