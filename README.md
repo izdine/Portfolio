@@ -2,11 +2,11 @@
 Iz-Dine Amadou Portfolio 
 
 # Project setup
-install vite 
+Install vite.
 npm init @vite.js/app
 
-install three.js 
+Install three.js 
 
 run this comand: npm install three
 
-after install sucsessfuly installing run this comand: npm run dev 
+After install sucsessfuly installing run this comand: npm run dev.
