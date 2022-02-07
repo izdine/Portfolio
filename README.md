@@ -5,6 +5,8 @@ Iz-Dine Amadou Portfolio
 install vite 
 Npm init @vite.js/app
 
-Npm install three
+install three.js 
+
+run this comand: npm install three
 
 after install sucsessfuly installing run this comand: npm run dev 
